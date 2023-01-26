@@ -12,7 +12,8 @@ def main():
     response = requests.get(image_download_url)
     z = zipfile.ZipFile(io.BytesIO(response.content))
     z.extractall(image_directory_path)
-
+conda activate opencv
+python src/download_images.py
 
 if __name__ == '__main__':
     main()
